@@ -25,9 +25,10 @@ echo "mongo-php-driver Installed...";
 # Append settings to php.ini file
 echo "extension=mongodb.so;" >> /etc/php/7.2/apache2/php.ini;
 
-#Resart Apach2
+# Restart Apache2
 sudo systemctl restart apache2;
 
+# Creates a php directory and a phpinfo file
 sudo mkdir /var/www/html/php;
 sudo touch /var/www/html/php/info.php;
 sudo echo "<?php phpinfo(); ?>" >> /var/www/html/php/info.php;
